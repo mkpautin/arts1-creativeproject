@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Art Syllabus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="ai-prompt-overlay" id="aiPromptOverlay">
+        <div class="ai-prompt-container">
+            <div class="ai-logo">
+                <span class="ai-logo-icon">✦</span>
+                <span class="ai-logo-text">SyllabusAI</span>
+            </div>
+            
+            <div class="prompt-display">
+                <div class="prompt-label">PROMPT</div>
+                <div class="prompt-text" id="promptText">
+                    <span class="prompt-cursor"></span>
+                </div>
+            </div>
+            
+            <button class="generate-btn" id="generateBtn">
+                <span class="btn-icon">▶</span>
+                <span class="btn-label">Generate Syllabus</span>
+            </button>
+            
+            <div class="prompt-hints">
+                <p>Click to generate a comprehensive syllabus on AI & Art</p>
+            </div>
+        </div>
+        <div class="prompt-bg-grid"></div>
+    </div>
+
+    <!-- ========== Loading Overlay ========== -->
+    <div class="ai-loading-overlay" id="aiLoadingOverlay">
+        <div class="loading-container">
+            <div class="loading-icon">
+                <span class="loading-spark">✦</span>
+            </div>
+            <div class="loading-text">Generating your syllabus</div>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="loading-status" id="loadingStatus">Initializing AI model...</div>
+        </div>
+    </div>
+    
+    <div class="main-content" id="mainContent">
+
+        <!-- ========== AI Response Header ========== -->
+        <div class="ai-response-header" id="aiResponseHeader">
+            <div class="response-indicator">
+                <span class="ai-icon">✦</span>
+                <span class="ai-label">SyllabusAI Response</span>
+            </div>
+        </div>
+
+        <canvas id="neural-bg"></canvas>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#description">About</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <h1>Creative Machines: Art in the Age of AI</h1>
+            <p class="subtitle">Exploring the evolving relationship between art and artificial intelligence, examining how technology shapes the future of artistic expression.</p>
+        </header>
+
+        <!-- Description Section -->
+        <section id="description" class="card-section">
+            <h2 class="section-title">Syllabus Overview</h2>
+            <div class="section-divider"></div>
+            
+            <div class="description-content">
+                <p>[PLACEHOLDER: Write your syllabus description here. Provide an overview explaining what students will learn about AI and art, the historical context, and philosophical questions about creativity.]</p>
+                
+                <p>[PLACEHOLDER: Describe key themes - generative art, machine learning, ethical considerations, the human artist's role, and impact on visual arts, music, literature, and performance.]</p>
+
+                <h3 class="sub-heading">Course Goals & Objectives</h3>
+                
+                <ul class="objectives-list">
+                    <li>Students will be able to trace the lineage of creative computing from the mid-20th century to the present, identifying key historical milestones that paved the way for modern generative tools.</li>
+                    <li>Students will be able to differentiate between major generative architectures (such as GANs vs. Diffusion Models) and demonstrate a working knowledge of how these systems parse data to create visual outputs.</li>
+                    <li>Students will be able to evaluate the validity of AI art through the lens of Art History, specifically by comparing modern "prompt engineering" to historical optical aids like the Camera Obscura and debating the boundary between "tool" and "cheating."</li>
+                    <li>Students will be able to assess the psychological barriers to accepting AI art (such as the "Uncanny Valley" and the "Gift Economy") and explain why knowledge of non-human authorship alters the viewer's emotional experience.</li>
+                    <li>Students will be able to formulate a personal stance on the future of human-AI collaboration, proposing solutions for ethical challenges regarding copyright, labor displacement, and creative attribution.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Modules Section -->
+        <section id="modules">
+            <h2 class="section-title">Course Modules</h2>
+            <div class="section-divider"></div>
+
+            <div class="modules-grid">
+                
+                <!-- MODULE 1 -->
+                <article class="module-card">
+                    <span class="module-number">1</span>
+                    <h3 class="module-title">Tracing the History of AI Art</h3>
+                    <img src="images/rome/Module Cover.png">
+                    <div>Photo from <a href="http://AIArtists.org">AIArtists.org</a></div>
+                    <br>
+                    <div class="module-description">
+                        <p>Artificial Intelligence (AI) has quickly taken over the modern century. From once being a science fiction, it now animates the tools we use to speak, create, navigate, and imagine. AI systems have found its way into society through our music recommendations,  movements across city streets and increasingly create the text, images, and sounds that make up our digital environments. In a matter of years, machine learning models have evolved from specialized research tools to mass-market creative partners integrated into homes, workplaces, classrooms, and social media.</p>
+                        <p>Long before the upcoming of this global phenomenon, artists have been figuring out the other side of this technical machine from how it thinks, sees, or makes an image on its own. Understanding the history of AI in art reveals that today’s explosion of generative tools is not an isolated event but part of a much longer continuum of experimentation, critique, and imagination. From early algorithmic experiments and cybernetic aesthetics to the rise of machine learning art and the current generative AI culture, this module examines the evolution of artificial intelligence in art throughout history.</p>
+                        <h3>I. Prehistories of AI Art: Early AI, Machines, and Algorithms</h3>
+                        <img src="images/rome/Chicken Automaton.jpg" style="width: 40%;">
+                        <img src="images/rome/Mechanical Turk.jpg" style="width: 39.5%;">
+                        <div>Photos from Pinterest (Left) and Patowary (2022) (Right)</div>
+                        <br>
+                        <p>AI art already began before AI. Even way back in the ancient period, the idea of creating a life-like being began to sprout (Iacob, 2024). This idea resulted into machine contraptions such as automatons that are machines that follow a sequence of operations to create an illusion that they are self-operated. Wolfgang Von Kemplen presented the Mechanical Turk way back in the 18th century where it differed from the existing automatons as it displayed human-like intelligence, being able to play chess with any human opponent (Patowary, 2022). The secret behind this magnificent machine was actually a human operator creating the illusion of the Turk being to play chess like a human. </p>
+                        <p>Interestingly enough, the Mechanical Turk serves as a mirror of AI in our own age: foreshadowing today’s invisible human workers in dataset labeling and content moderation.</p>
+                        <h5>Suggested Readings:</h5>
+                        <ul class="addindent">
+                            <li><a href="https://www.amusingplanet.com/2022/11/the-mechanical-turk-18th-century-chess.html">The Mechanical Turk: An 18th Century Chess Playing Robot</a> by Kaushik Patowary</li>
+                            <li><a href="https://www.thecollector.com/automata-ai-comparison-historical-cultural-comparison/">Automata & AI: A Historical & Cultural Comparison</a> by Anisia Iacob</li>
+                        </ul>
+                        <p>As new machines and technology are created, they also become new tools for artists to experiment with creating a new language of art. Programming and algorithms became the communication between human and machine.</p>
+                        <h5>Suggested Readings:</h5>
+                        <ul class="addindent">
+                            <li><a href="https://www.sothebys.com/en/articles/vera-molnar-the-grande-dame-of-generative-art">Vera Molnár: The Grande Dame of Generative Art</a> by Bryan Martin</li>
+                            <li><a href="https://collections.vam.ac.uk/item/O211685/hommage-a-paul-klee-13965-print-nake-frieder/hommage-%C3%A0-paul-klee-13965-print-nake-frieder/hommage-%C3%A0-paul-klee-13965-print-nake-frieder/">Hommage à Paul Klee</a> by Frieder Nake (1965)</li>
+                        </ul>
+                        <h3>II. AI Becomes Medium: The Birth of Computer and Generative Art</h3>
+                        <img src="images/rome/LearningToSee_1.jpg" width="30%">
+                        <img src="images/rome/LearningToSee_2.jpg" width="29.5%">
+                        <img src="images/rome/LearningToSee_3.jpg" width="31%">
+                        <div>Photos from Memo Akten’s “Learning to See” Series</div>
+                        <br>
+                        <p>As computers evolve, so does the scale of artistic collaboration between humans and machines. Basic algorithms became neural networks, which opened up new possibilities. From being an artistic tool, AI slowly became artistic partners that can create art in a unique method with the guidance of human input. Artists “trained” these machines through repetition, examples, and imagination.</p>
+                        <h5>Suggested Watch/Readings:</h5>
+                        <ul class="addindent">
+                            <li><a href="https://www.youtube.com/watch?v=1QIOoEID8kk">Memo Akten Explores Human-Machine Interaction with AI</a> by Art and Technology</li>
+                            <li><a href="https://www.youtube.com/watch?v=JBgG_VSP7f8&t=25s">Karl Sims - Evolved Virtual Creatures, Evolution Simulation, 1994</a> by MediaArtTube</li>
+                            <li><a href="http://www.davidrokeby.com/vns.html">Interactive Installations : Very Nervous System (1986-1990)</a> by David Rokeby</li>
+                        </ul>
+                        <h4>Activity:</h4>
+                        <ol style="margin-left: 2em;">
+                            <li>Use a free AI or generative tool (e.g., ChatGPT, Gemini, Deepseek, or DeepAI) to produce an image. The prompt can be any image or scenery they can imagine and the generation can be repeated until satisfactory.</li>
+                            <li>Students share a short reflection: How did the tool influence your creative choices? Did it “collaborate” or simply execute commands?</li>
+                        </ol>
+                        <h3>III. “When Machines Dream”: AI Art in the 21st Century & Its Place in the Art World</h3>
+                        <img src="images/rome/Machine Hallucinations.jpg" width="70%">
+                        <div>Photo from Refik Anadol’s “Machine Hallucinations”</div>
+                        <br>
+                        <p>From basic algorithms, to artistic tools, to artistic partners, and finally into its final form in the 21st century. AI has attained the ability to generate images, videos, and sounds that not only imitate but complicate human creativity with just the use of possible reference material and language prompts. In the current society, AI art is more than just a genre; it's a cultural movement that has resulted in anything from gigantic data centers and community-made fan art to popular TikTok filters and billion-peso auctions, and our personal phone apps.</p>
+                        <p>Complex systems such as Generative Adversarial Network (GANs) and Diffusion models brought a new aesthetic signature to AI art by depicting fragmentation, surreal continuity, fluid morphing, dataset ghosts, and speculative realism. One great example is Refik Anadol’s “Machine Hallucinations” where he made use of millions of images of flowers, trees, mushrooms,  landscapes, water clouds, etc. as datasets to train the model (Refik Anadol Studio, 2024).</p>
+                        <h5>Suggested Readings/Watch:</h5>
+                        <ul class="addindent">
+                            <li><a href="https://refikanadol.com/works/machine-hallucinations-nature-dreams/">Machine Hallucinations — Nature Dreams</a> by Refik Anadol Studio</li>
+                            <li><a href="https://www.youtube.com/watch?v=5Y384U-bOJo&t=327s">Refik Anadol : Unsupervised - Machine Hallucinations, 2022 | MoMA</a> by Art Data</li>
+                        </ul>
+                        <p>In 2018, AI art had one of its biggest auction sales with the artwork “Portrait of Edmond Belamy”. It was sold for $432,500, marking the debut of AI art on the global auction scene. (Benney & Kistler, n.d.). This rise for recognition of AI art raised some key questions like “who is the owner of outputs of a generative model? Is it the artist? The coder? The dataset creator? Or the collective?”.</p>
+                        <img src="images/rome/Portrait of Edmond de Belamy.jpg" width="30%">
+                        <div>Photo of “Portrait of Edmond de Belamy (2018)”</div>
+                        <br>
+                        <p>Looking at the state of AI art in the present time, it has become less of a museum piece and more of daily consumption art. We see and use them in different social media platforms through filters, videos, captions, and other community involvements. As a result, a new kind of "visual citizenship" is created, allowing for the democratization of production of art and dismantling traditional artistic gatekeeping (Herrie et al., 2024).</p>
+                        <p>The rise of AI in art opened up new avenues for creativity along with challenges that threaten the creative space. As Baxter (2024) said in her article, the future of art should not be a competition between humans and machines, but a partnership that we need to cultivate and build upon carefully. What emerges from this tension may become the next major artistic movement.</p>
+                        <h5>Suggested Readings:</h5>
+                        <ul class="addindent">
+                            <li><a href="https://medium.com/@poola.vii/from-cant-to-can-how-generative-ai-democratizes-creation-ae70412792eb">From Can’t to Can — How Generative AI Democratizes Creation</a> by Atsushi Ito</li>
+                            <li><a href="https://www.bbc.com/future/article/20241018-ai-art-the-end-of-creativity-or-a-new-movement">AI art: The end of creativity or the start of a new movement?</a> by Claudia Baxter</li>
+                        </ul>
+                    </div>
+
+                    <div class="contributor">
+                        <div class="contributor-avatar">1</div>
+                        <div class="contributor-info">
+                            <span class="contributor-label">Created by</span>
+                            <span class="contributor-name">Alexander Jerome Ison</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MODULE 2 -->
+                <article class="module-card">
+                    <span class="module-number">2</span>
+                    <h3 class="module-title">Unleashing Creativity: Exploring Generative AI in Art</h3>
+                    
+                    <div class="module-description">
+                        <p>This module dives into the exciting world of Generative AI and its transformative impact on art. Generative AI refers to a class of artificial intelligence algorithms capable of generating new content, including images, music, and text. This module aims to equip students with a foundational understanding of Generative AI and its applications in artistic creation.</p>
+                        <p><h3>Goals:</h3></p>
+                        <ul class="addindent">
+                            <li>To understand the basic principles of Generative AI.</li>
+                            <li>To explore various Generative AI tools and platforms for art creation.</li>
+                            <li>To experiment with different AI techniques to generate unique artworks.</li>
+                            <li>To critically analyze the ethical and aesthetic implications of AI-generated art.</li>
+                            <li>To foster creative expression through the integration of AI in the artistic process.</li>
+                        </ul>
+                        <p><h3>Objectives:</h3></p>
+                        <p>Upon completion of this module, students will be able to:</p>
+                        <ul class="addindent">
+                            <li>Define Generative AI and its role in contemporary art.</li>
+                            <li>Identify and utilize different Generative AI tools for image generation.</li>
+                            <li>Apply AI techniques to create original artworks in various styles.</li>
+                            <li>Evaluate the strengths and limitations of AI-generated art.</li>
+                            <li>Discuss the ethical considerations surrounding AI in art, including copyright and originality.</li>
+                            <li>Incorporate Generative AI as a tool for enhancing their artistic vision and creative workflow.</li>
+                        </ul>
+                        <p><h3>I. Introduction to Generative AI</h3></p>
+                        <img src="" width="60%">
+                        <div> Photo by: <a href="https://www.concentrix.com/insights/blog/a-guide-to-the-evolution-of-ai/">A Guide to the Evolution of AI - Concentrix</a></div>
+                        <br>
+                        <p>Generative AI, which creates new content, evolved from early AI to deep learning with RNNs and GANs. The Transformer architecture enabled models like GPT and DALL-E, democratizing AI creation. Key concepts include neural networks, machine learning, and algorithms. Applications range from art to drug prediction, but challenges like bias persist. Future trends involve smarter models and ethical AI.</p>
+                        <p><h5>Suggested readings:</h5></p>
+                        <ul class="addindent">
+                            <li><a href="https://www.bing.com/ck/a?!&&p=5e9d9515eadc67d82f3345264b2370733ba6595e36f184a6140de7b4543cd69bJmltdHM9MTc2NDU0NzIwMA&ptn=3&ver=2&hsh=4&fclid=050f2b3e-e09d-607d-29dd-39d6e1896198&psq=Generative+AI+with+Python+and+TensorFlow+2+by+Joseph+Babcock%2c+Raghav+Bali&u=a1aHR0cHM6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzL2Fib3V0L0dlbmVyYXRpdmVfQUlfd2l0aF9QeXRob25fYW5kX1RlbnNvckZsb3cuaHRtbD9pZD00SElzRUFBQVFCQUo">Generative AI with Python and TensorFlow 2 - Google Books</a>  by Joseph Babcock, Raghav Bali</li>
+                            <li><a href="https://www.bing.com/ck/a?!&&p=6f53e7c1c1b5582d4301678d17ed869e2e74e44587c00574c8d4f62fa9cdaabaJmltdHM9MTc2NDU0NzIwMA&ptn=3&ver=2&hsh=4&fclid=050f2b3e-e09d-607d-29dd-39d6e1896198&psq=Introduction+to+Generative+AI+by+Numa+Dhamani%2c+Maggie+Engler&u=a1aHR0cHM6Ly93d3cubWFnZ2llZW5nbGVyLmNvbS9ib29rLw&ntb=1">Introduction to Generative AI</a> by Numa Dhamani, Maggie Engler</li>
+                        </ul>
+                        <p><h3>II. Exploring Generative AI Tools</h3></p>
+                        <img src="" width="40%">
+                        <div>Photo by: <a href="https://zapier.com/blog/how-to-use-dall-e-2/">How to use DALL·E 2 to create AI images | Zapier</a></div>
+                        <br>
+                        <p>In this hands-on AI Art Workshop, participants will explore popular platforms like DALL-E 2, Midjourney, and Artbreeder to generate diverse artistic outputs. Through experimentation with text prompts and image inputs, they'll learn to craft effective prompts, manipulate images, and explore various artistic styles. The goal is to understand AI art generation and create original AI-generated artworks, suitable for artists, designers, students, and anyone interested in the intersection of AI and art, regardless of prior experience.</p>
+                        <p><h5>Suggested readings:</h5></p>
+                        <ul class="addindent">
+                            <li><a href="">Prompt Engineering for Generative AI</a> by James Phoenix, Mike Taylor</li>
+                            <li><a href="">Generative AI with Python and TensorFlow 2</a> by Joseph Babcock, Raghav Bali</li>
+                        </ul>
+                        <p><h3>III. AI-Driven Art Creation</h3></p>
+                        <img src="" width="30%">
+                        <div>Photo by: <a href="https://medium.com/@dceey3ps/cehlider-unveiling-a-new-dimension-of-digital-art-by-an-ai-prodigy-59b7054e8fc8">Cehlider: Unveiling a New Dimension of Digital Art by an AI Prodigy | by John | Medium</a></div>
+                        <br>
+                        <p>This pedagogical unit engages students in the practical application of Generative AI tools for artistic creation, emphasizing thematic and stylistic exploration. Following the creation phase, students will participate in structured peer review and critique sessions designed to facilitate a comprehensive analysis of both the creative processes employed and the resultant artistic outcomes. This approach fosters critical thinking, collaborative learning, and a deeper understanding of the intersection between artificial intelligence and artistic expression</p>
+                        <p><h5>Suggested readings:</h5></p>
+                        <ul class="addindent">
+                            <li><a href="">AI Art and Design: The Role of Artificial Intelligence in Creative Expression</a> by Hassan Ugail</li>
+                            <li><a href="">Evaluating Art: A Guide to Peer Critique</a> by Peter Clothier</li>
+                        </ul>
+                        <p><h3>IV. Ethical and Aesthetic Considerations</h3></p>
+                        <img src="" width="40%">
+                        <div>Photo by: <a href="https://ijssai.iikii.com.sg/download/ethical-and-philosophical-perspectives-on-artificial-intelligence-generated-art-16545.pdf">Ethical and Philosophical Perspectives on Artificial Intelligence-Generated Art</a></div>
+                        <br>
+                        <p>This unit delves into the ethical dimensions of AI-generated art, exploring complex issues like copyright, ownership rights, and the very definition of artistic authenticity. It also critically analyzes the aesthetic qualities inherent in AI art, examining how these new forms of expression influence and potentially reshape traditional artistic practices.</p>
+                        <p><h5>Suggested readings:</h5></p>
+                        <ul class="addindent">
+                            <li><a href="https://arxiv.org/abs/2507.05549">The Ethical Implications of AI in Creative Industries</a> by Prerana Khatiwada, Joshua Washington, Tyler Walsh, Ahmed Saif Hamed, Lokesh Bhatta</li>
+                            <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5194370">Synthetic minds in art: an ethical lens on AI's creative agency</a> by Patrici Calvo</li>
+                        </ul>
+                        <p><h3>V. Final Project: AI Art Exhibition</h3></p>
+                        <img src="" width="40%">
+                        <div>Photo by: <a href="">Bridging AI and Art: Students Explore AI’s Creative Potential at the 4th Annual Day of AI Celebration, Andrew Whitecare</a></div>
+                        <br>
+                        <p>Students will showcase their AI-generated artworks in a formal exhibition, presented either in a virtual gallery space or a physical setting. Complementing their artistic creations, each student will submit a written reflection. This reflection will serve as a critical analysis of their individual creative process, detailing the methodologies employed, articulating the challenges encountered during the artwork's development, and synthesizing the key insights and understandings gained throughout their engagement with the module. The exhibition and accompanying reflections aim to provide a comprehensive assessment of the students' learning journey and their ability to integrate AI tools into artistic practice.</p>
+                        <p><h5>Suggested readings:</h5></p>
+                        <ul class="addindent">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contributor">
+                        <div class="contributor-avatar">2</div>
+                        <div class="contributor-info">
+                            <span class="contributor-label">Created by</span>
+                            <span class="contributor-name">Sean Archer Noel Codeniera</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MODULE 3 -->
+                <article class="module-card">
+                    <span class="module-number">3</span>
+                    <h3 class="module-title">The Imitation Game: Authorship, Tools, and Authenticity</h3>
+                    
+                    <div class="module-description">
+                        <p>This module investigates the central controversy defining the AI era: Does the use of algorithmic tools constitute "cheating," or is it a natural evolution of artistic practice? Drawing on the concept of Mimesis (imitation), this unit challenges students to define where the "human" ends and the "machine" begins.</p>
+                        <p>We will examine the "Imitation Spectrum" described in social cognitive neuroscience, exploring why humans socially reject "over-imitation" (the Uncanny Valley) and how this bias shapes our rejection of AI art. We will contrast this with the "Intentionalist" view of art, which argues that value comes from human agency and the "Gift Economy" (Lewis Hyde)—the idea that art is a social bond, not just a commodity.</p>
+                        <img src="images/mk/imitation spectrum.jpg" width="60%">
+                        <div>A comparative analysis of imitation across the domains of art (human-made and AI-generated) to visualize how art value and art appreciation can be linked to different conceptions of imitation</div>
+                        <br>
+                        <p>To contextualize modern fears, we will look backward. We will analyze the historical controversy surrounding the Camera Obscura and the Daguerreotype. Just as critics in the 16th and 19th centuries accused Vermeer and photographers of "copying nature" rather than creating art, we will ask if Prompt Engineering is merely the modern version of tracing a projected image.</p>
+                        <img src="images/mk/camera obscura.jpg" width="40%">
+                        <div>Shows early examples of optical and photographic technologies used to enhance imitation in visual art.</div>
+                        <div>(A) Presents an example of James Ayscough’s 1750 illustration of a Camera Obscura Room.</div>
+                        <div>(B) Shows the first known photography camera, the Daguerreotype, by Louis Daguerre in 1838. </div>
+                        <div>(C) Illustrates one of the earliest photographs, Boulevard du Temple, Paris, by Louis Daguerre in 1838.</div>
+                        <br>
+                        <p><h3>Learning Objectives:</h3></p>
+                        <ol class="addindent">
+                            <li>Define the "sweet spot" of imitation in both social behavior and art history, and explain why AI often fails to hit it.</li>
+                            <li>Compare contemporary arguments of "Labor Theft" against historical reactions to the Camera Obscura and Photography.</li>
+                            <li>Critique the concept of "Human Exceptionalism" in creativity.</li>
+                        </ol>
+                        <p><h4>Class Activity: The Turing Test of Art</h4></p>
+                        <p>Students will be shown a series of 10 artworks (Mix of Abstract, Impressionist, and Photorealist). Half will be human-made, half AI-generated. Students must vote on the origin of each. Afterward, we will discuss the results in the context of the Gangadharbatla (2022) study, which suggests humans are statistically unable to distinguish the two, proving our bias is often conceptual rather than aesthetic.</p>
+                        <p><h5>Resource List:</h5></p>
+                        <ul class="addindent">
+                            <li>Poetics (The foundation of Mimesis) by Aristotle</li>
+                            <li>The Gift by Lewis Hyde</li>
+                            <li>Tim’s Vermeer (2013) - The "Comparator Mirror" Scene.</li>
+                            <li>The Uncanny Valley by Masahiro Mori</li>
+                            <li><a href="https://journals.sagepub.com/doi/full/10.1177/0276237421994697">The role of AI attribution knowledge in the evaluation of artwork</a> by Harsha Gangadharbatla</li>
+                        </ul>
+                    </div>
+
+                    <div class="contributor">
+                        <div class="contributor-avatar">3</div>
+                        <div class="contributor-info">
+                            <span class="contributor-label">Created by</span>
+                            <span class="contributor-name">Muhamad Khaled Pau-tin</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MODULE 4 -->
+                <article class="module-card">
+                    <span class="module-number">4</span>
+                    <h3 class="module-title">Emotion in Art and AI</h3>
+                    
+                    <div class="module-description">
+                        <p>Art is often defined as a skillful appeal to one’s aesthetics, using techniques to paint thought-provoking images, sculpture, and even performances. It is an activity where artists make use of their lived experiences and personal beliefs to express — and even evoke — ideas and emotions unto others (Freeman, 2014). Throughout history, it has been used for historical documentation and peaceful protests, even being found through national heroes such as Jose Rizal — in the form of his Noli Me Tangere and El Filibusterismo.</p>
+                        <p>Contrary to common belief, art does not have to be grand; in fact, even simple doodles done during class could be considered as such. So long as it conveys the artist’s intentions to the audience, it cannot be dismissed simply for “lacking technique”.</p>
+                        <img src="images/albea/png.jpg" width="30%">
+                        <img src="images/albea/png (1).jpg" width="30%">
+                        <div>Left: AI-generated art; Right: human recreation of AI art</div>
+                        <div>Photos from <a href="https://vt.tiktok.com/ZSfuqX8qG/">Maboroshiiro</a></div>
+                        <br>
+                        <p>Through developing technology, modern-day artists are now presented with a convenient way to take part in such activity: generative AI. The use of such allows one to quickly create images, however, controversies regarding its “soulless” look quickly swept through online discussions — being described as “uncanny,” or “lacking in emotions.” For this reason, AI art is described as being “unable to evoke any sort of emotions due to its lack of human nature.”</p>
+                        <p>Conversely, AI art has been shown to still possess the ability to do so. The perceived lack of “emotional resonance” was simply a product of biases and prejudice against AI art. According to Agudo (2022), evoked emotions were found to be watered down by knowledge of AI use, fueled by antagonistic disposition against generative art.</p>
+                        <p>As you read this module, you are expected to:</p>
+                        <ul class="addindent">
+                            <li>Be able to identify the pros and cons of using art (man-made or AI-generated) as a means of conveying emotions and ideas; and</li>
+                            <li>Be able to form an unbiased opinion on the use of generative AI in art.</li>
+                        </ul>
+                        <br>
+                        <h5>Suggested Readings (Resource List):</h5>
+                        <ul class="addindent">
+                            <li><a href="https://research.ebsco.com/c/sgb4yb/search/details/kwjh5pzu6r?db=nlebk%2Ce000xww&limiters=None&q=art+and+emotion&searchMode=all">Art’s Emotions : Ethics, Expression and Aesthetic Experience</a> by Damien Freeman, pages 159-170.</li>
+                            <li><a href="https://ila.onlinelibrary.wiley.com/doi/full/10.1002/rrq.552">Being Human in the Age of Generative AI</a> by Higgs and Stornaiuolo, pages 641-643.</li>
+                            <li><a href="https://www.sciencedirect.com/science/article/pii/S0747563223002261">Does an Emotional Connection to Art Really Require a Human Artist?</a> by Demmer et al.</li>
+                        </ul>
+                    </div>
+
+                    <div class="contributor">
+                        <div class="contributor-avatar">4</div>
+                        <div class="contributor-info">
+                            <span class="contributor-label">Created by</span>
+                            <span class="contributor-name">Albea Fe Berber</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MODULE 5 -->
+                <article class="module-card">
+                    <span class="module-number">5</span>
+                    <h3 class="module-title">[Module 5 Title]</h3>
+                    
+                    <div class="module-description">
+                        <p>[PLACEHOLDER: Module 5 description - goals, objectives, topics, activities. Max 500 words.]</p>
+                    </div>
+
+                    <div class="contributor">
+                        <div class="contributor-avatar">5</div>
+                        <div class="contributor-info">
+                            <span class="contributor-label">Created by</span>
+                            <span class="contributor-name">Justin Emmanuel Tabao</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2 class="section-title">AI Art Showcase</h2>
+            <div class="section-divider"></div>
+            <p class="gallery-intro">Explore examples of AI-generated artwork that demonstrate the concepts covered in this course.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="placeholder-1.jpg" alt="AI Artwork 1">
+                        <div class="gallery-overlay">
+                            <h4>[Artwork Title]</h4>
+                            <p>Created with: [AI Tool]</p>
+                            <p>Artist: [Name]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="placeholder-2.jpg" alt="AI Artwork 2">
+                        <div class="gallery-overlay">
+                            <h4>[Artwork Title]</h4>
+                            <p>Created with: [AI Tool]</p>
+                            <p>Artist: [Name]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="placeholder-3.jpg" alt="AI Artwork 3">
+                        <div class="gallery-overlay">
+                            <h4>[Artwork Title]</h4>
+                            <p>Created with: [AI Tool]</p>
+                            <p>Artist: [Name]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="placeholder-4.jpg" alt="AI Artwork 4">
+                        <div class="gallery-overlay">
+                            <h4>[Artwork Title]</h4>
+                            <p>Created with: [AI Tool]</p>
+                            <p>Artist: [Name]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="card-section">
+            <h2 class="section-title">Reference List</h2>
+            <div class="section-divider"></div>
+            
+            <ol class="reference-list">
+                <li>Agudo, U.; Arrese, M.; Liberal, K. G.; Matute, H. Assessing Emotion and Sensitivity of AI Artwork. Frontiers in Psychology 2022, 13. https://doi.org/10.3389/fpsyg.2022.879088.</li>
+                <li>Damien Freeman. (2014). Art’s Emotions : Ethics, Expression and Aesthetic Experience. Routledge.</li>
+                <li>Demmer, T. R.; Kühnapfel, C.; Fingerhut, J.; Pelowski, M. Does an Emotional Connection to Art Really Require a Human Artist? Emotion and Intentionality Responses to AI- versus Human-Created Art and Impact on Aesthetic Experience. Computers in Human Behavior 2023, 148 (148), 107875. https://doi.org/10.1016/j.chb.2023.107875.</li>
+                <li>Higgs, J. M.; Stornaiuolo, A. Being Human in the Age of Generative AI: Young People’s Ethical Concerns about Writing and Living with Machines. Reading research quarterly 2024, 59 (4). https://doi.org/10.1002/rrq.552.</li>
+                <li>Tone Roald. (2007). Cognition in Emotion : An Investigation Through Experiences with Art (Vol. 00010). Brill.</li>
+                <li>Art and Technology. (2018, May 11). Memo Akten Explores Human-Machine Interaction with AI – Brought to you by Hyundai [Video]. YouTube. https://www.youtube.com/watch?v=1QIOoEID8kk</li>
+                <li>Art Data. (2023, September 18). Refik Anadol : Unsupervised - Machine Hallucinations, 2022 | MOMA [Video]. YouTube. https://www.youtube.com/watch?v=5Y384U-bOJo</li>
+                <li>Baxter, C. (2024, October 21). AI art: The end of creativity or the start of a new movement? https://www.bbc.com/future/article/20241018-ai-art-the-end-of-creativity-or-a-new-movement</li>
+                <li>Benney, M., & Kistler, P. (n.d.). Artificial Intelligence Timeline [UPDATED 2020] — AIArtists.org. AIArtists.org. https://aiartists.org/ai-timeline-art</li>
+                <li>David Rokeby : Very nervous system. (2010). http://www.davidrokeby.com/vns.html</li>
+                <li>Herrie, M. B., Maleve, N. R., Philipsen, L., & Staunæs, A. B. (2024). Democratization and generative AI image creation: aesthetics, citizenship, and practices. AI & Society, 40(5), 3495–3507. https://doi.org/10.1007/s00146-024-02102-y</li>
+                <li>Iacob, A. (2024). Automata & AI: A historical & cultural comparison | TheCollector. TheCollector. https://www.thecollector.com/automata-ai-comparison-historical-cultural-comparison/</li>
+                <li>Ito, A. (2025, August 30). From Can’t to Can — How Generative AI Democratizes Creation. Medium. https://medium.com/@poola.vii/from-cant-to-can-how-generative-ai-democratizes-creation-ae70412792eb</li>
+                <li>Martin, B. (2023, July 14). Vera Molnár: the Grande Dame of generative art. Sothebys.com. https://www.sothebys.com/en/articles/vera-molnar-the-grande-dame-of-generative-art</li>
+                <li>MediaArtTube. (2008, December 6). Karl Sims - Evolved Virtual Creatures, Evolution Simulation, 1994 [Video]. YouTube. https://www.youtube.com/watch?v=JBgG_VSP7f8</li>
+                <li>Museum, V. a. A. (n.d.). Hommage à Paul Klee, 13/9/65 Nr.2 | Nake, Frieder | V&A Explore The Collections. Victoria and Albert Museum: Explore the Collections. https://collections.vam.ac.uk/item/O211685/hommage-a-paul-klee-13965-print-nake-frieder/hommage-%C3%A0-paul-klee-13965-print-nake-frieder/hommage-%C3%A0-paul-klee-13965-print-nake-frieder/</li>
+                <li>Patowary, K. (2022, November 29). The Mechanical Turk: An 18th Century Chess Playing Robot. Amusing Planet. https://www.amusingplanet.com/2022/11/the-mechanical-turk-18th-century-chess.html</li>
+                <li>Refik Anadol Studio. (2024, March 9). Machine Hallucinations — Nature Dreams - Refik Anadol. Refik Anadol. https://refikanadol.com/works/machine-hallucinations-nature-dreams/</li>
+                <li>Bara, I., Darda, K. M., Ramsey, R., & Cross, E. S. (2025). Algorithmic aesthetics: Cognitive perspectives on AI-generated visual art. iScience, 28(11).</li>
+                <li></li>
+
+            </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>AI & Art Syllabus</p>
+            <p class="footer-credits">Created by Group 3 | 2025</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
