@@ -323,7 +323,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-// ============ OPTIONAL: Skip intro for development ============
-// Uncomment the line below to skip the intro animation during development
-window.onload = () => { elements.promptOverlay.classList.add('hidden'); elements.mainContent.classList.add('visible'); initNeuralBackground(); };
